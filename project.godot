@@ -1,0 +1,78 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Biodeg",
+"language": "GDScript",
+"path": "res://Development/Scripts/Entities Scripts/Biodeg.gd"
+}, {
+"base": "Area2D",
+"class": "nonBiodeg",
+"language": "GDScript",
+"path": "res://Development/Scripts/Entities Scripts/nonBiodeg.gd"
+}, {
+"base": "Area2D",
+"class": "recyclable",
+"language": "GDScript",
+"path": "res://Development/Scripts/Entities Scripts/recyclable.gd"
+} ]
+_global_script_class_icons={
+"Biodeg": "",
+"nonBiodeg": "",
+"recyclable": ""
+}
+
+[application]
+
+config/name="IECMPTK_Group_2_MCO"
+run/main_scene="res://Development/Scenes/Levels/Main.tscn"
+config/icon="res://icon.png"
+
+[input]
+
+Drag={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+Release={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="recy"
+2d_physics/layer_2="bio"
+2d_physics/layer_3="non"
+2d_physics/layer_4="SIGN"
+2d_physics/layer_5="layer 5"
+2d_physics/layer_6="layer 6"
+2d_physics/layer_7="layer 7"
+2d_physics/layer_8="layer 8"
+2d_physics/layer_9="layer 9"
+2d_physics/layer_10="layer 10"
+2d_physics/layer_11="layer 11"
+2d_physics/layer_12="layer 12"
+2d_physics/layer_13="layer 13"
+2d_physics/layer_14="layer 14"
+2d_physics/layer_15="layer 15"
+2d_physics/layer_16="layer 16"
+2d_physics/layer_17="layer 17"
+2d_physics/layer_18="Biodegradable Trash Can"
+2d_physics/layer_19="Non-Biodegradable Trash Can"
+2d_physics/layer_20="Recyclable Trash Can"
+
+[rendering]
+
+quality/driver/fallback_to_gles2=true
+environment/default_environment="res://default_env.tres"

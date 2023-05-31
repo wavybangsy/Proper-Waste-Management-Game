@@ -1,2 +1,1 @@
-# Proper-Waste-Management-Game
-This drag and drop game project was intended for children to learn proper waste management. 
+# IECMPTK_Group_2_MCO
