@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Bad Ending.ogg-2cdc5a6f88ae031a8bad68e3224b35da.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Bad Ending.ogg"
+dest_files=[ "res://.import/Bad Ending.ogg-2cdc5a6f88ae031a8bad68e3224b35da.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

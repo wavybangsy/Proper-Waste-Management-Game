@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Correct Answer.ogg-6797c2ae7b62341f4141e5e014df5fdc.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Correct Answer.ogg"
+dest_files=[ "res://.import/Correct Answer.ogg-6797c2ae7b62341f4141e5e014df5fdc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
