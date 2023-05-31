@@ -1,0 +1,208 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Development/Scripts/Levels Scripts/Level 1.gd" type="Script" id=1]
+[ext_resource path="res://Development/Scenes/Entities/Biodegradable Trash Can.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Development/Scenes/Entities/Aluminum Can.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Development/Scenes/Entities/Non-Biodegradable Trash Can.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Development/Scenes/Entities/Recyclable Trash Can.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Development/Scenes/Entities/Moldy Cheese.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Development/Scenes/Entities/Bottle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Development/Scenes/Entities/Newspaper.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Development/Scenes/Entities/Paper Stack.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Development/Scenes/Entities/Poop.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Development/Scenes/Entities/Cardboard Box.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Development/Scenes/Entities/Moldy Orange.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Development/Scenes/Entities/Crumpled Paper.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Development/Scenes/Entities/Paper Cup.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Development/Scenes/Entities/Plastic Bag.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Development/Scenes/Entities/Leaves.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Development/Scenes/Entities/Cloth.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Development/Scenes/Entities/Can.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Development/Scenes/Entities/Fish Bone.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Development/Scenes/Entities/Moldy Bread.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Development/Scenes/Entities/Banana.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Development/Scenes/Entities/SignRecy.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Development/Scenes/Entities/SignBio.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Development/Scenes/Entities/SignNon.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Assets/Background/Third Stage 1025x605.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Background/Dead Forest 1025x605.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Background/Forest 1025x605.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Audio/Level 1.ogg" type="AudioStream" id=28]
+[ext_resource path="res://Development/Scenes/Entities/Big Trash moving.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Development/Scenes/Entities/Big Trash idle.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Development/Scenes/Entities/Big Trash Idle 2.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Assets/Audio/Correct Answer.ogg" type="AudioStream" id=32]
+
+[node name="Level 1" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+autoplay = true
+
+[node name="Correct" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 32 )
+attenuation = 0.196146
+
+[node name="BG_3" type="Sprite" parent="."]
+texture = ExtResource( 27 )
+centered = false
+
+[node name="BG_2" type="Sprite" parent="."]
+texture = ExtResource( 26 )
+centered = false
+
+[node name="BG_1" type="Sprite" parent="."]
+texture = ExtResource( 25 )
+centered = false
+
+[node name="Timer" type="Label" parent="."]
+margin_left = 360.0
+margin_top = 20.0
+margin_right = 460.0
+margin_bottom = 40.0
+rect_scale = Vector2( 3, 3 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GarbageCounter" type="RichTextLabel" parent="."]
+margin_left = 601.721
+margin_top = 76.4337
+margin_right = 631.721
+margin_bottom = 96.4337
+rect_scale = Vector2( 3, 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GarbageCollected" type="Label" parent="."]
+margin_left = 240.0
+margin_top = 77.298
+margin_right = 360.0
+margin_bottom = 97.298
+rect_scale = Vector2( 3, 3 )
+text = "Garbage Collected:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BTidle2" parent="." instance=ExtResource( 31 )]
+position = Vector2( 528.276, 505.553 )
+
+[node name="BTidle4" parent="." instance=ExtResource( 31 )]
+position = Vector2( 274.364, 510.047 )
+
+[node name="BTidle" parent="." instance=ExtResource( 30 )]
+position = Vector2( 755.062, 503.965 )
+
+[node name="BTidle3" parent="." instance=ExtResource( 30 )]
+position = Vector2( 221.622, 503.965 )
+
+[node name="BTnot2" parent="." instance=ExtResource( 30 )]
+position = Vector2( 499.801, 501.269 )
+
+[node name="BigTrashMoving" parent="." instance=ExtResource( 29 )]
+position = Vector2( 138.509, 503.853 )
+
+[node name="BigTrashMoving2" parent="." instance=ExtResource( 29 )]
+position = Vector2( 654.422, 506.998 )
+
+[node name="BigTrashMoving3" parent="." instance=ExtResource( 29 )]
+position = Vector2( 220.3, 507.897 )
+
+[node name="BigTrashMoving4" parent="." instance=ExtResource( 29 )]
+position = Vector2( 494.884, 498.01 )
+
+[node name="BigTrashMoving5" parent="." instance=ExtResource( 29 )]
+position = Vector2( 751.044, 502.953 )
+
+[node name="Biodegradable Trash Can" parent="." instance=ExtResource( 2 )]
+position = Vector2( 256.25, 502.973 )
+
+[node name="Non-Biodegradable Trash Can" parent="." instance=ExtResource( 4 )]
+position = Vector2( 512.5, 502.973 )
+
+[node name="Recyclable Trash Can" parent="." instance=ExtResource( 5 )]
+position = Vector2( 768.75, 502.973 )
+
+[node name="SignRecy" parent="." instance=ExtResource( 22 )]
+position = Vector2( 768.65, 502.973 )
+
+[node name="SignBio" parent="." instance=ExtResource( 23 )]
+position = Vector2( 256.25, 502.973 )
+
+[node name="SignNon" parent="." instance=ExtResource( 24 )]
+position = Vector2( 512.5, 502.973 )
+
+[node name="Aluminum Can" parent="." instance=ExtResource( 3 )]
+position = Vector2( 169.008, 538.504 )
+scale = Vector2( 0.571429, 0.583333 )
+
+[node name="Banana" parent="." instance=ExtResource( 21 )]
+position = Vector2( 719.474, 578.862 )
+scale = Vector2( 0.67336, 0.67336 )
+
+[node name="Bottle" parent="." instance=ExtResource( 7 )]
+position = Vector2( 115.895, 540.568 )
+scale = Vector2( 0.696218, 0.696218 )
+
+[node name="Can" parent="." instance=ExtResource( 18 )]
+position = Vector2( 275.749, 582.074 )
+scale = Vector2( 0.622565, 0.622565 )
+
+[node name="Cardboard Box" parent="." instance=ExtResource( 11 )]
+position = Vector2( 431.097, 542.562 )
+scale = Vector2( 0.614449, 0.614449 )
+
+[node name="Cloth" parent="." instance=ExtResource( 17 )]
+position = Vector2( 172.727, 584.548 )
+scale = Vector2( 0.575698, 0.575698 )
+
+[node name="Crumpled Paper" parent="." instance=ExtResource( 13 )]
+position = Vector2( 560.34, 580.161 )
+scale = Vector2( 0.457437, 0.457437 )
+
+[node name="Fish Bone" parent="." instance=ExtResource( 19 )]
+position = Vector2( 810.295, 575.314 )
+scale = Vector2( 0.470221, 0.470221 )
+
+[node name="Leaves" parent="." instance=ExtResource( 16 )]
+position = Vector2( 490.092, 581.079 )
+scale = Vector2( 0.731047, 0.731047 )
+
+[node name="Moldy Bread" parent="." instance=ExtResource( 20 )]
+position = Vector2( 858.881, 555.285 )
+scale = Vector2( 0.491894, 0.491894 )
+
+[node name="Moldy Cheese" parent="." instance=ExtResource( 6 )]
+position = Vector2( 356.452, 581.644 )
+scale = Vector2( 0.391232, 0.391232 )
+
+[node name="Moldy Orange" parent="." instance=ExtResource( 12 )]
+position = Vector2( 586.119, 531.061 )
+scale = Vector2( 0.481091, 0.481091 )
+
+[node name="Newspaper" parent="." instance=ExtResource( 8 )]
+position = Vector2( 359.954, 532.078 )
+scale = Vector2( 0.630794, 0.630794 )
+
+[node name="Paper Cup" parent="." instance=ExtResource( 14 )]
+position = Vector2( 653.179, 572.734 )
+scale = Vector2( 0.54737, 0.54737 )
+
+[node name="Paper Stack" parent="." instance=ExtResource( 9 )]
+position = Vector2( 47.7891, 563.544 )
+scale = Vector2( 0.742637, 0.742637 )
+
+[node name="Plastic Bag" parent="." instance=ExtResource( 15 )]
+position = Vector2( 980.003, 529.904 )
+scale = Vector2( 0.684623, 0.684623 )
+
+[node name="Poop" parent="." instance=ExtResource( 10 )]
+position = Vector2( 900.046, 576.324 )
+scale = Vector2( 0.592254, 0.592254 )
+[connection signal="area_exited" from="Biodegradable Trash Can" to="." method="_on_Biodegradable_Trash_Can_area_exited"]
+[connection signal="area_exited" from="Non-Biodegradable Trash Can" to="." method="_on_NonBiodegradable_Trash_Can_area_exited"]
+[connection signal="area_exited" from="Recyclable Trash Can" to="." method="_on_Recyclable_Trash_Can_area_exited"]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Development/Scripts/Entities Scripts/Moldy Orange.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Garbage/Moldy Orange.png" type="Texture" id=2]
+[ext_resource path="res://Development/Scenes/Entities/LabelSMALL.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Development/fixedsys-ligatures.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Audio/Wrong Answer.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Audio/Correct Answer.ogg" type="AudioStream" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 41.737
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+outline_size = 1
+font_data = ExtResource( 4 )
+
+[node name="Moldy Orange" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 131080
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( -12.309, -6.172 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Label" parent="." instance=ExtResource( 3 )]
+margin_left = 21.3862
+margin_top = -89.185
+margin_right = 181.386
+margin_bottom = -43.185
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 1, 0.976471, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "MOldy Orange"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wrong" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Correct" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_Area2D_mouse_exited"]
